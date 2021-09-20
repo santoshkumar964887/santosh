@@ -1,38 +1,414 @@
-.App {
-  text-align: center;
+* {
+  scroll-behavior: smooth;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: "Ubuntu", sans-serif;
+  text-transform: capitalize;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.brand-logo {
+  margin-left: 100px;
+  font-family: "Permanent Marker", cursive, sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav-wrapper {
+  background-color: #263238;
+}
+
+.nav-links {
+  margin-right: 100px;
+}
+
+.nav-links a:hover {
+  background-color: thistle;
+  color: #263238;
+}
+
+.heroImg {
+  filter: brightness(30%);
+}
+
+.heroTxt::first-letter {
+  color: yellow;
+  font-size: larger;
+}
+
+.slider .indicators .indicator-item.active {
+  background-color: #263238;
+}
+
+.pabout {
+  background-color: rgb(106, 165, 255);
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  color: #fafcff;
+}
+
+.about-container {
+  margin-top: 50px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-wrap: wrap;
+}
+
+.aboutText {
+  font-size: large;
+  margin-bottom: 20px;
+  margin-left: 20px !important;
+}
+
+.aboutText::first-letter {
+  font-size: 50px;
+}
+
+.card {
+  width: 150px;
+  height: 200px;
+  border-radius: 3px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  -ms-transform: scale(1.1);
+  /* IE 9 */
+  -webkit-transform: scale(1.1);
+  /* Safari 3-8 */
+  transform: scale(1.1);
+  border: 1px solid grey;
+}
+
+.card-image img {
+  object-fit: contain;
+}
+
+.pskills {
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+}
+
+.infotxt {
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.projects {
+  background-color: rgb(106, 165, 255);
+  padding-bottom: 10px;
+}
+
+.projectImg img {
+  height: 100px;
+  width: 200px;
+  border-radius: 3px;
+}
+
+.project-link {
+  display: inline;
+}
+
+.github-link {
+  display: inline;
+}
+
+img.github-icon {
+  vertical-align: bottom;
+}
+
+a {
+  color: red;
+}
+
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project-box {
+  /* border: 1px solid black; */
+  margin-bottom: 20px;
+  padding: 10px 5px 10px 5px;
+  border-radius: 5px;
+  height: 450px;
+  background-color: #dde1e7;
+  box-shadow: -3px -3px 5px #ffffff70, 3px 3px 15px #000000;
+}
+
+.project-box:hover {
+  -ms-transform: scale(1.08);
+  /* IE 9 */
+  -webkit-transform: scale(1.08);
+  /* Safari 3-8 */
+  transform: scale(1.08);
+  transition: all 3s ease-in;
+}
+
+.footer {
+  margin-top: 200px;
+  background-color: #263238;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.social-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  transition: transform 0.2s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.social-link:hover {
+  transform: scale(1.1);
+}
+
+#gotopbtn {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  background: #27ae60;
+  bottom: 40px;
+  right: 50px;
+  text-decoration: none;
+  text-align: center;
+  line-height: 50px;
+  color: white;
+  font-size: 22px;
+  border-radius: 10px;
+}
+.gotopbtn {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  background: #27ae60;
+  bottom: 40px;
+  right: 50px;
+  text-decoration: none;
+  text-align: center;
+  line-height: 50px;
+  color: white;
+  font-size: 22px;
+  border-radius: 10px;
+}
+
+.gotopbtn:hover {
+  background: lightgreen;
+  color: black;
+}
+
+form label {
+  font-size: medium;
+}
+
+form input {
+  color: white;
+}
+
+.sendBtn {
+  padding: 10px;
+  background-color: #27ae60;
+  font-weight: 600;
+  border: none;
+  width: 100px;
+  border-radius: 20px;
+  color: black;
+}
+
+.sendBtn:hover {
+  background-color: lightcyan;
+  cursor: pointer;
+}
+
+.card-image {
+  padding: 5px;
+}
+
+@media only screen and (max-width: 990px) {
+  .brand-logo {
+    margin-left: 0px;
   }
-  to {
-    transform: rotate(360deg);
+  .about-container {
+    flex-direction: column;
   }
+  .aboutHeader {
+    text-align: center;
+  }
+  .profImage {
+    margin: auto;
+  }
+  .aboutText {
+    margin-top: 20px;
+  }
+}
+
+.card-image {
+  padding: 5px;
+}
+
+@media only screen and (max-width: 330px) {
+  .card {
+    width: 135px;
+  }
+  .card-image img {
+    object-fit: contain;
+    width: 50px;
+  }
+}
+
+.MultiCarousel {
+  float: left;
+  overflow: hidden;
+  padding: 15px;
+  width: 100%;
+  position: relative;
+}
+
+.MultiCarousel .MultiCarousel-inner {
+  transition: 1s ease all;
+  float: left;
+}
+
+.MultiCarousel .MultiCarousel-inner .item {
+  float: left;
+}
+
+.MultiCarousel .MultiCarousel-inner .item > div {
+  text-align: center;
+  padding: 10px;
+  height: 450px;
+  margin: 10px;
+  background: #dde1e7;
+}
+
+.MultiCarousel .leftLst,
+.MultiCarousel .rightLst {
+  position: absolute;
+  border-radius: 50%;
+  top: calc(50% - 20px);
+}
+
+.MultiCarousel .leftLst {
+  left: 0;
+}
+
+.MultiCarousel .rightLst {
+  right: 0;
+}
+
+.MultiCarousel .leftLst.over,
+.MultiCarousel .rightLst.over {
+  pointer-events: none;
+  background: #ccc;
+}
+
+.achiv-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.achiv {
+  width: 290px;
+  overflow: hidden;
+  height: 450px;
+  border: 1px solid rgb(114, 114, 114);
+  border-radius: 5px;
+  box-shadow: -1px 3px 8px 5px rgb(117, 117, 117);
+  margin: 10px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.achiv .title {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 10px 15px;
+}
+
+.achiv img {
+  width: 220px;
+  height: 160px;
+  border-radius: 5px;
+}
+
+.achiv .details {
+  margin: 10px;
+  text-align: center;
+}
+
+.achiv .link a img {
+  width: 35px;
+  height: 35px;
+  border-radius: 15px;
+  box-shadow: -1px 1px 5px 2px rgb(177, 177, 177);
+  margin: 10px 0px 0px 5px;
+}
+
+.achiv .link a p {
+  display: inline;
+  vertical-align: super;
+  margin: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  color: rgb(6, 66, 177);
+}
+
+.achiv .link a p:hover {
+  color: rgb(2, 28, 61);
+}
+
+.achiv .link a:hover {
+  color: rgb(2, 28, 61);
+}
+
+.achivement h4 {
+  text-align: center;
+}
+
+.certificate {
+  background-color: rgb(106, 165, 255);
+  margin: 30px 0px 0px 0px;
+}
+
+.certificate h4 {
+  padding: 30px;
+  color: white;
+  text-align: center;
+}
+
+.logo1 {
+  width: 35px;
+  height: 35px;
+  border-radius: 10px;
+  box-shadow: -1px 1px 5px 2px rgb(177, 177, 177);
+  margin: 10px 0px 0px 5px;
+}
+
+.link1 p {
+  display: inline;
+  vertical-align: super;
+  margin: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  color: rgb(6, 66, 177);
+}
+
+.link1 p:hover {
+  color: rgb(2, 28, 61);
+}
+
+.link2 p {
+  display: inline;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 3px;
+  text-align: center;
+  background-color: rgb(6, 66, 177);
+  color: white;
+  padding: 10px;
+}
+
+.link2 p:hover {
+  background-color: rgb(2, 28, 61);
 }
